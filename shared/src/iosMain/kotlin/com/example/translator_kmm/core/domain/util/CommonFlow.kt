@@ -14,7 +14,7 @@ actual open class CommonFlow<T> actual constructor(
         dispatcher: CoroutineDispatcher,
         onCollect: (T) -> Unit,
     ): DisposableHandle {
-        val job = coroutineScope.launch {
+        val job = coroutineScope.launch(dispatcher) {
             flow.collect(onCollect)
         }
         return DisposableHandle { job.cancel() }
