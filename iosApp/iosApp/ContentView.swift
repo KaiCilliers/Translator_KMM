@@ -2,9 +2,14 @@ import SwiftUI
 import shared
 
 struct ContentView: View {
-
+    
+    private let appModule = AppModule()
+    
 	var body: some View {
-		Text("Hello stereotipical world!")
+		TranslateScreen(
+            historyDataSource: appModule.historyDataSource,
+            translateUseCase: appModule.translateUseCase
+        )
 	}
 }
 
