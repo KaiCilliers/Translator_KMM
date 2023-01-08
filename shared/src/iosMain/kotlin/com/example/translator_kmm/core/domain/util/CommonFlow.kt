@@ -1,14 +1,13 @@
 package com.example.translator_kmm.core.domain.util
 
-import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.launch
 
 actual open class CommonFlow<T> actual constructor(
     private val flow: Flow<T>
 ): Flow<T> by flow {
 
+    // todo could be private
     fun subscribe(
         coroutineScope: CoroutineScope,
         dispatcher: CoroutineDispatcher,
@@ -18,6 +17,16 @@ actual open class CommonFlow<T> actual constructor(
             flow.collect(onCollect)
         }
         return DisposableHandle { job.cancel() }
+    }
+
+    fun subscribe(
+        onCollect: (T) -> Unit,
+    ): DisposableHandle {
+        return subscribe(
+            coroutineScope = GlobalScope,
+            dispatcher = Dispatchers.Main,
+            onCollect = onCollect
+        )
     }
 
 }
