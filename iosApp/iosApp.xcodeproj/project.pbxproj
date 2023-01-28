@@ -15,6 +15,9 @@
 		51B9726829859E950091035F /* MicrophonePowerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9726729859E950091035F /* MicrophonePowerObserver.swift */; };
 		51B9726A29859EEE0091035F /* IOSVoiceToTextParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9726929859EEE0091035F /* IOSVoiceToTextParser.swift */; };
 		51B9726D29859FB40091035F /* IOSVoiceToTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9726C29859FB40091035F /* IOSVoiceToTextViewModel.swift */; };
+		51B972702985A03F0091035F /* VoiceRecorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9726F2985A03F0091035F /* VoiceRecorderButton.swift */; };
+		51B972722985A04E0091035F /* VoicerecorderDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B972712985A04E0091035F /* VoicerecorderDisplay.swift */; };
+		51B972742985A1260091035F /* VoiceToTextScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B972732985A1260091035F /* VoiceToTextScreen.swift */; };
 		51C987F4296AED710005E4C3 /* GradientSurface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C987F3296AED710005E4C3 /* GradientSurface.swift */; };
 		51C987F6296AF11B0005E4C3 /* LanguageDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C987F5296AF11B0005E4C3 /* LanguageDisplay.swift */; };
 		51C987F8296AF1EB0005E4C3 /* ProgressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C987F7296AF1EB0005E4C3 /* ProgressButton.swift */; };
@@ -41,6 +44,9 @@
 		51B9726729859E950091035F /* MicrophonePowerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophonePowerObserver.swift; sourceTree = "<group>"; };
 		51B9726929859EEE0091035F /* IOSVoiceToTextParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSVoiceToTextParser.swift; sourceTree = "<group>"; };
 		51B9726C29859FB40091035F /* IOSVoiceToTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSVoiceToTextViewModel.swift; sourceTree = "<group>"; };
+		51B9726F2985A03F0091035F /* VoiceRecorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecorderButton.swift; sourceTree = "<group>"; };
+		51B972712985A04E0091035F /* VoicerecorderDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicerecorderDisplay.swift; sourceTree = "<group>"; };
+		51B972732985A1260091035F /* VoiceToTextScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceToTextScreen.swift; sourceTree = "<group>"; };
 		51C987F3296AED710005E4C3 /* GradientSurface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientSurface.swift; sourceTree = "<group>"; };
 		51C987F5296AF11B0005E4C3 /* LanguageDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDisplay.swift; sourceTree = "<group>"; };
 		51C987F7296AF1EB0005E4C3 /* ProgressButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressButton.swift; sourceTree = "<group>"; };
@@ -99,9 +105,20 @@
 		51B9726B29859F9A0091035F /* ppresentation */ = {
 			isa = PBXGroup;
 			children = (
+				51B9726E2985A0260091035F /* components */,
 				51B9726C29859FB40091035F /* IOSVoiceToTextViewModel.swift */,
+				51B972732985A1260091035F /* VoiceToTextScreen.swift */,
 			);
 			path = ppresentation;
+			sourceTree = "<group>";
+		};
+		51B9726E2985A0260091035F /* components */ = {
+			isa = PBXGroup;
+			children = (
+				51B9726F2985A03F0091035F /* VoiceRecorderButton.swift */,
+				51B972712985A04E0091035F /* VoicerecorderDisplay.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 		51FFCF0C296A1D8F00187747 /* core */ = {
@@ -340,6 +357,7 @@
 			files = (
 				51C987F8296AF1EB0005E4C3 /* ProgressButton.swift in Sources */,
 				51B9726D29859FB40091035F /* IOSVoiceToTextViewModel.swift in Sources */,
+				51B972742985A1260091035F /* VoiceToTextScreen.swift in Sources */,
 				51B9726829859E950091035F /* MicrophonePowerObserver.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				51C987F4296AED710005E4C3 /* GradientSurface.swift in Sources */,
@@ -356,6 +374,8 @@
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 				51B97264298568850091035F /* TranslateHistoryItem.swift in Sources */,
 				51C987FA296AF3990005E4C3 /* TranslateTextField.swift in Sources */,
+				51B972702985A03F0091035F /* VoiceRecorderButton.swift in Sources */,
+				51B972722985A04E0091035F /* VoicerecorderDisplay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
