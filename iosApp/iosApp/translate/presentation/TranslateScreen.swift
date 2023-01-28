@@ -74,6 +74,8 @@ struct TranslateScreen: View {
                         item: item,
                         onClick: { viewModel.onEvent(event: TranslateEvent.SelectHistoryItem(item: item)) }
                     )
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.background)
                 }
             }
             .listStyle(.plain)
